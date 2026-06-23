@@ -1,12 +1,9 @@
 import express from "express";
 
+import todos from "./data/todo.js";
+
 const app = express();
 app.use(express.json()); // Parse JSON bodies
-
-let todos = [
-  { id: 1, task: "Learn Node.js", completed: false },
-  { id: 2, task: "Build CRUD API", completed: false },
-];
 
 // GET All – Read
 app.get("/todos", (req, res) => {
